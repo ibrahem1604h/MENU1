@@ -1,5 +1,5 @@
 .brand img {
-    width: 250px;
+    width: 50%;
     height: auto;
     border: 1px solid;
     border-radius: 50px;
@@ -8,100 +8,96 @@
 }
 
 hr {
-    border: #000000;
+    border: none;
     height: 20px;
     background-color: #000000;
 }
 
-.hot_drink {
+.hot_drink, .cold-drink {
     background: #424C4E;
-    width: 500px;
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
     border: 1px solid;
     border-radius: 50px;
+    padding: 20px;
 }
 
-.hot_drink h1 {
+.hot_drink h1, .cold-drink h1 {
     text-align: center;
-    font-size: 50px;
-    margin-bottom: -1px;
+    font-size: 2.5rem;
+    margin-bottom: 0;
 }
 
-.hot_drink li {
-    font-size: 20px;
+.hot_drink ul, .cold-drink ul {
+    padding-left: 0;
+    list-style: none;
 }
 
 .item-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
 }
 
-.english {
+.item-container:last-child {
+    border-bottom: none;
+}
+
+.english, .arabic {
     flex: 1;
-    text-align: left;
-    font-weight: bold;
-    white-space: nowrap;
+    font-size: 1.2rem;
 }
 
 .price {
-    flex: 0 0 100px;
+    flex: 0 0 20%;
     text-align: center;
-}
-
-.arabic {
-    flex: 1;
-    text-align: right;
 }
 
 .am {
     position: absolute;
-    border-left: 20px solid #727272;
-    height: 700px;
-    top: 90%;
+    border-left: 10px solid #727272;
+    height: 50vh;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -56%);
+    transform: translate(-50%, -50%);
 }
 
-.cold-drink {
-    background: #424C4E;
-    width: 500px;
-    height: 650px;
-    border-radius: 50px;
-    position: absolute;
-    top: 45%;
-    left: 60%;
-    transform: translate(10%, -9.5%);
-    border: 1px solid;
-    font-size: 20px;
+/* Media queries */
+@media (max-width: 768px) {
+    .brand img {
+        width: 80%;
+    }
+    
+    .hot_drink h1, .cold-drink h1 {
+        font-size: 2rem;
+    }
+
+    .english, .arabic {
+        font-size: 1rem;
+    }
+
+    .price {
+        flex: 0 0 30%;
+    }
 }
 
-.cold-drink h1 {
-    text-align: center;
-    font-size: 50px;
-    margin-bottom: -1px;
-}
+@media (max-width: 480px) {
+    .brand img {
+        width: 90%;
+    }
+    
+    .hot_drink h1, .cold-drink h1 {
+        font-size: 1.5rem;
+    }
 
-.item-containe {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
+    .english, .arabic {
+        font-size: 0.9rem;
+    }
 
-.englis {
-    flex: 1;
-    text-align: left;
-    font-weight: bold;
-    white-space: nowrap;
-}
-
-.pric {
-    flex: 0 0 100px;
-    text-align: center;
-}
-
-.arabi {
-    flex: 1;
-    text-align: right;
+    .price {
+        flex: 0 0 40%;
+    }
 }
